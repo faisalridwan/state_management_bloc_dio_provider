@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:state_management_app/blocs/all_post_bloc.dart';
+import 'package:state_management_app/blocs/comment_bloc.dart';
 import 'package:state_management_app/blocs/detail_bloc.dart';
 import 'package:state_management_app/pages/home_page.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(builder: (_) => AllPostBloc()),
         ChangeNotifierProvider(builder: (_) => DetailBloc()),
+        ChangeNotifierProvider(builder: (_) => CommentBloc()),
       ],
       child: MaterialApp(
         title: 'State Management',
